@@ -196,7 +196,6 @@ Options -Indexes
 #AIOWPS_SIX_G_BLACKLIST_START
 # 6G FIREWALL/BLACKLIST
 # @ https://perishablepress.com/6g/
-
 # 6G:[QUERY STRINGS]
 <IfModule mod_rewrite.c>
 	RewriteEngine On
@@ -213,20 +212,17 @@ Options -Indexes
 	RewriteCond %{QUERY_STRING} ('|\")(.*)(drop|insert|md5|select|union) [NC]
 	RewriteRule .* - [F]
 </IfModule>
-
 # 6G:[REQUEST METHOD]
 <IfModule mod_rewrite.c>
 	RewriteCond %{REQUEST_METHOD} ^(connect|debug|move|put|trace|track) [NC]
 	RewriteRule .* - [F]
 </IfModule>
-
 # 6G:[REFERRERS]
 <IfModule mod_rewrite.c>
 	RewriteCond %{HTTP_REFERER} ([a-z0-9]{2000,}) [NC,OR]
 	RewriteCond %{HTTP_REFERER} (semalt.com|todaperfeita) [NC]
 	RewriteRule .* - [F]
 </IfModule>
-
 # 6G:[REQUEST STRINGS]
 <IfModule mod_alias.c>
 	RedirectMatch 403 (?i)([a-z0-9]{2000,})
@@ -241,7 +237,6 @@ Options -Indexes
 	RedirectMatch 403 (?i)\.(aspx?|bash|bak?|cfg|cgi|dll|exe|git|hg|ini|jsp|log|mdb|out|sql|svn|swp|tar|rar|rdf)$
 	RedirectMatch 403 (?i)/(^$|(wp-)?config|mobiquo|phpinfo|shell|sqlpatch|thumb|thumb_editor|thumbopen|timthumb|webshell)\.php
 </IfModule>
-
 # 6G:[USER AGENTS]
 <IfModule mod_setenvif.c>
 	SetEnvIfNoCase User-Agent ([a-z0-9]{2000,}) bad_bot
@@ -266,7 +261,6 @@ Options -Indexes
 #AIOWPS_FIVE_G_BLACKLIST_START
 # 5G BLACKLIST/FIREWALL (2013)
 # @ http://perishablepress.com/5g-blacklist-2013/
-
 # 5G:[QUERY STRINGS]
 <IfModule mod_rewrite.c>
 	RewriteEngine On
@@ -281,7 +275,6 @@ Options -Indexes
 	RewriteCond %{QUERY_STRING} (GLOBALS|REQUEST)(=|\[|%) [NC]
 	RewriteRule .* - [F]
 </IfModule>
-
 # 5G:[USER AGENTS]
 <IfModule mod_setenvif.c>
 # SetEnvIfNoCase User-Agent ^$ keep_out
@@ -292,7 +285,6 @@ Options -Indexes
 		Deny from env=keep_out
 	</limit>
 </IfModule>
-
 # 5G:[REQUEST STRINGS]
 <IfModule mod_alias.c>
 	RedirectMatch 403 (https?|ftp|php)\://
@@ -318,7 +310,6 @@ Options -Indexes
 	RedirectMatch 403 /playing.php
 	RedirectMatch 403 muieblackcat
 </IfModule>
-
 # 5G:[REQUEST METHOD]
 <ifModule mod_rewrite.c>
 	RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
@@ -346,37 +337,40 @@ Options -Indexes
 </IfModule>
 #AIOWPS_PREVENT_IMAGE_HOTLINKS_END
 # END All In One WP Security
-
 AddDefaultCharset utf-8
 php_value memory_limit 512M
-
 # supress php errors
 php_flag display_startup_errors off
 php_flag display_errors off
 php_flag html_errors off
 php_value docref_root 0
 php_value docref_ext 0
-
 # enable PHP error logging
 php_flag  log_errors on
 php_value error_log  /PHP_errors.log
 
+# BEGIN rlrssslReallySimpleSSL rsssl_version[5.0.2]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+# END rlrssslReallySimpleSSL
 # BEGIN WordPress
 # Директивы (строки) между `BEGIN WordPress` и `END WordPress`
 # созданы автоматически и подлежат изменению только через фильтры WordPress.
 # Сделанные вручную изменения между этими маркерами будут перезаписаны.
 <IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-	RewriteBase /
-	RewriteRule ^index\.php$ - [L]
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . /index.php [L]
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
-
 # http://habrahabr.ru/company/xakep/blog/259843/
 # Для противодействия SQL-инъекциям блокируем запросы к URL, содержащие определенные ключевые слова:
 RewriteCond %{query_string} concat.*\( [NC,OR]
@@ -388,7 +382,6 @@ SetEnvIf user-agent «Indy Library» stayout=1
 SetEnvIf user-agent «libwww-perl» stayout=1
 SetEnvIf user-agent «Wget» stayout=1
 deny from env=stayout
-
 # https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess
 <IfModule mod_mime.c>
 # Data interchange
@@ -464,7 +457,6 @@ deny from env=stayout
 # ----------------------------------------------------------------------
 # | Compression                                                        |
 # ----------------------------------------------------------------------
-
 <IfModule mod_deflate.c>
 	
 # Force compression for mangled `Accept-Encoding` request headers
@@ -544,27 +536,21 @@ deny from env=stayout
 	</IfModule>
 	
 </IfModule>
-
 # ----------------------------------------------------------------------
 # | ETags                                                              |
 # ----------------------------------------------------------------------
-
 # Remove `ETags` as resources are sent with far-future expires headers.
 #
 # https://developer.yahoo.com/performance/rules.html#etags
 # https://tools.ietf.org/html/rfc7232#section-2.3
-
 # `FileETag None` doesn't work in all cases.
 <IfModule mod_headers.c>
 	Header unset ETag
 </IfModule>
-
 FileETag None
-
 # ----------------------------------------------------------------------
 # | Expires headers                                                    |
 # ----------------------------------------------------------------------
-
 # Serve resources with far-future expires headers.
 #
 # (!) If you don't control versioning with filename-based
@@ -572,7 +558,6 @@ FileETag None
 # to something like one week.
 #
 # https://httpd.apache.org/docs/current/mod/mod_expires.html
-
 <IfModule mod_expires.c>
 	
 	ExpiresActive on
