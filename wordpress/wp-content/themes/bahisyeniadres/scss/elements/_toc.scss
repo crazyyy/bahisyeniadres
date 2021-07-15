@@ -1,0 +1,114 @@
+.table-of-contents {
+  background: #f3f4f4;
+  margin-bottom: 30px;
+
+  @media (min-width: $min-md) {
+    margin-left: -30px;
+  }
+
+  &__header {
+    padding: 15px 30px;
+    font-weight: bold;
+  }
+
+  &__hide {
+    cursor: pointer;
+
+    &:after {
+      content: "\f106";
+      font: normal normal normal 14px/1 FontAwesome;
+      margin-left: 12px;
+    }
+
+    &:hover {
+      opacity: .9;
+      @include transition(all .3s ease);
+    }
+  }
+
+  &.open {
+    .table-of-contents__list {
+      display: block;
+    }
+    .table-of-contents__hide:after {
+      content: "\f107";
+    }
+  }
+
+  &__list {
+    margin-top: 0;
+
+    li {
+
+    }
+
+    .level-1 {
+
+      a {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+    }
+
+    .level-2 {
+      font-size: .92em;
+    }
+
+    .level-3 {
+      font-size: .88em;
+    }
+  }
+
+  ol {
+    counter-reset: point;
+    margin: 0 30px 0;
+    padding-bottom: 15px;
+
+    li {
+      padding-left: 0;
+
+      &:before {
+        content: counter(point) ". ";
+        counter-increment: point 1;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        border: none;
+        opacity: .5;
+        margin-right: 5px;
+        margin-left: 0;
+      }
+    }
+
+    .level-1 {
+      //counter-increment: point;
+      counter-reset: sublist;
+    }
+
+    .level-2 {
+      counter-reset: sublist3;
+      margin-top: .3em;
+      margin-bottom: .7em;
+      margin-left: 30px;
+
+      &:before {
+        content: counter(point) "." counter(sublist) ". ";
+        counter-increment: sublist;
+      }
+    }
+
+    .level-3 {
+      margin-top: .3em;
+      margin-bottom: .7em;
+      margin-left: 70px;
+
+      &:before {
+        content: counter(point) "." counter(sublist) "." counter(sublist3) ". ";
+        counter-increment: sublist3;
+        width: 40px;
+      }
+    }
+
+  }
+}

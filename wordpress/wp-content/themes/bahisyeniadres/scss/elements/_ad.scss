@@ -1,0 +1,27 @@
+// Рекламные блоки в контенте
+.b-r {
+  margin: 10px 0 25px;
+}
+
+.b-r--before-site-content {
+  margin: 0 0 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $min-xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.b-r--after-site-content {
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+
+  @media (min-width: $min-xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

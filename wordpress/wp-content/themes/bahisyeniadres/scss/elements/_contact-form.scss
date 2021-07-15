@@ -1,0 +1,47 @@
+.contact-form {
+  margin-bottom: 15px;
+
+  input,
+  textarea {
+    padding: 7px 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 7px;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .errors {
+    margin: -5px 0 15px;
+    color: #dd284f;
+  }
+
+  .contact_message {
+    font-size: 20px;
+  }
+
+  .contact-form-notes-after {
+    font-size: 85%;
+    @include clearfix;
+    margin-bottom: 15px;
+  }
+
+  .contact_submit {
+    @extend .btn;
+
+    &:before {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+}
+
+.contact_email .email {
+  display: none;
+}

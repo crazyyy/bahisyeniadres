@@ -1,0 +1,32 @@
+{
+  "domain": "developnow.xyz",
+  "theme": "bahisyeniadres",
+  "path": {
+    "base": {
+      "src": "assets/",
+      "dest": "./html/",
+      "desthtml": "./html/**/*.{html,htm,php}"
+    },
+    "images": {
+      "src": "assets/img/",
+      "srcimg": "assets/img/**/*.{png,jpg,jpeg,gif,svg}",
+      "srcImgContent": "wordpress/wp-content/uploads/",
+      "dest": "./html/img/"
+    },
+    "fonts": {
+      "src": "assets/fonts/**",
+      "dest": "./html/fonts/"
+    },
+    "styles": {
+      "src": "assets/scss/",
+      "srcfiles": "assets/scss/**/*.scss",
+      "css": "assets/css/",
+      "cssfiles": "assets/css/**/*.css",
+      "dest": "./html/css/"
+    },
+    "scripts": {
+      "src": "assets/js/**",
+      "dest": "./html/js/"
+    }
+  }
+}

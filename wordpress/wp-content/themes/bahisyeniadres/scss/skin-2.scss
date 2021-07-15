@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+
+ *   НЕ РЕДАКТИРУЙТЕ ЭТОТ ФАЙЛ
+ *
+ *   ВНИМАНИЕ!!!!!!!
+ *
+ *   НЕ РЕДАКТИРУЙТЕ ЭТОТ ФАЙЛ
+ *   ПРИ ОБНОВЛЕНИИ ТЕМЫ - ВЫ ПОТЕРЯЕТЕ ВСЕ ВАШИ ИЗМЕНЕНИЯ
+ *   ИСПОЛЬЗУЙТЕ ДОЧЕРНЮЮ ТЕМУ ИЛИ НАСТРОЙКИ ТЕМЫ В АДМИНКЕ
+ *
+ *   ПОДБРОБНЕЕ:
+ *   https://docs.wpshop.ru/child-themes/
+
+--------------------------------------------------------------*/
+
+@import "preboot";
+
+// Small devices (landscape phones, 576px and up)
+$min-sm: 576px;
+$max-sm: 575px;
+// Medium devices (tablets, 768px and up)
+$min-md: 768px;
+$max-md: 767px;
+// Large devices (desktops, 992px and up)
+$min-lg: 992px;
+$max-lg: 991px;
+// Extra large devices (large desktops, 1200px and up)
+$min-xl: 1200px;
+$max-xl: 1199px;
+
+%font-awesome {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+%button {
+  display: inline-block;
+  padding: 10px 35px;
+  color: #fff;
+  background: #0298b1;
+  background: #5a80b1;
+  border-radius: 36px;
+  @include transition(all .3s ease);
+  background-image: url("../images/skin-1/bg-over.png");
+  background-repeat: repeat-x;
+  background-position: left top;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+  &:hover {
+    color: #fff;
+    @include opacity(.8)
+  }
+}
+
+
+
+
+body {
+
+}
+
+
+/********************************************************************
+ * Layout
+ *******************************************************************/
+.site {
+  background-color: transparent;
+
+  @media (min-width: $min-xl) {
+    width: 1100px;
+  }
+}
+
+.site-content {
+  background: #fff;
+  @include box-shadow(0 0 0 5px rgba(255,255,255,.35));
+}
+
+.content-area {
+
+  @media (min-width: $min-md) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $min-lg) {
+    padding-left: 30px;
+  }
+}
+
+.widget-area {
+  background: #dcd6d6;
+  padding: 20px 10px 0;
+
+  @media (min-width: $min-lg) {
+    width: 360px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $min-xl) {
+    width: 340px;
+    padding-right: 10px;
+  }
+}
+
+
+/********************************************************************
+ * Menu
+ *******************************************************************/
+.main-navigation {
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0 -5px 0;
+  z-index: 100;
+}
+
+
+/********************************************************************
+ * Post box
+ *******************************************************************/
+.post-box {
+  padding: 20px;
+  margin-bottom: 35px;
+  background: #fff;
+  @include box-shadow( 0 0 0 5px rgba(#5a80b1, .8) );
+
+  &__footer {
+    margin: 0 -20px -20px;
+    padding: 10px 20px;
+    background: #e9e3e3;
+  }
+
+  .entry-image {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.entry-title {
+  a {
+    border-bottom: none;
+  }
+}
+
+.entry-image {
+  margin-left: 0;
+
+  @media (min-width: $min-xl) {
+    margin-left: 0;
+  }
+}
+
+.entry-image--big {
+  margin-top: -20px;
+
+  img {
+    border-radius: 4px;
+  }
+}
+
+.entry-author {
+
+  &:before {
+    @extend %font-awesome;
+    content: "\f007";
+    margin-right: 6px;
+  }
+}
+
+.entry-date {
+  &:before {
+    @extend %font-awesome;
+    content: "\f133";
+    margin-right: 6px;
+  }
+}
+
+.entry-category {
+  &:before {
+    @extend %font-awesome;
+    content: "\f02b";
+    margin-right: 6px;
+  }
+}
+
+.entry-footer {
+
+  &__more {
+    @extend %button;
+  }
+}
+
+
+
+/********************************************************************
+ * Widgets
+ *******************************************************************/
+.widget {
+  padding: 15px 20px;
+  background: #fff;
+  @include box-shadow( 0 26px 15px -14px rgba(24, 79, 89, 0.1) );
+  border-radius: 4px;
+}
+
+.widget-header {
+  margin: -15px -20px 15px;
+  background: #5a80b1 url("../images/skin-2/bg-wave.png") center bottom repeat-x;
+  border-bottom: none;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  font-size: .95em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+
+
+/********************************************************************
+ * Other
+ *******************************************************************/
+.pagination .current {
+  background-image: url("../images/skin-1/bg-over.png");
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+
+
+

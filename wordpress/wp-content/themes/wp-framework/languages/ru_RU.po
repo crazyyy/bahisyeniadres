@@ -1,0 +1,278 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Knaipas WordPress Theme\n"
+"POT-Creation-Date: 2018-12-25 14:47+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: knaipa <aparserok@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:4
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: ../404.php:5
+msgid "Return home?"
+msgstr "Вернутся на главную?"
+
+#: ../comments.php:4
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr ""
+"Это сообщение защищено паролем. Введите пароль, чтобы посмотреть "
+"комментарии. "
+
+#: ../comments.php:16
+msgid "Comments are closed here."
+msgstr "Комментирование закрыто."
+
+#: ../functions.php:181
+msgid "Меню в шапке"
+msgstr ""
+
+#: ../functions.php:182
+msgid "Меню в сайдбар"
+msgstr ""
+
+#: ../functions.php:183
+msgid "Меню в подвал"
+msgstr ""
+
+#: ../functions.php:190
+msgid "Блок виджетов #1"
+msgstr ""
+
+#: ../functions.php:191
+msgid "Description for this widget-area..."
+msgstr "Описание для области виджета..."
+
+#: ../functions.php:362
+#, fuzzy, php-format
+#| msgid "<span class=\"fn\">%s</span> <span class=\"says\">says:</span>"
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr "<span class=\"fn\">%s</span> <span class=\"says\">сказал:</span>"
+
+#: ../functions.php:365
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: ../functions.php:370
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: ../functions.php:370
+msgid "(Edit)"
+msgstr "(Изменить)"
+
+#: ../functions.php:437
+msgid "Home"
+msgstr "Главная"
+
+#: ../functions.php:642
+msgid "Page"
+msgstr "Страница"
+
+#: ../functions.php:696 ../functions.php:712
+msgid "Products"
+msgstr "Продукция"
+
+#: ../functions.php:697
+msgid "Product"
+msgstr "Продукт"
+
+#: ../functions.php:698 ../functions.php:699 ../functions.php:702
+#: ../functions.php:755 ../functions.php:801
+msgid "Add"
+msgstr "Добавить"
+
+#: ../functions.php:700 ../functions.php:701 ../functions.php:753
+#: ../functions.php:799
+msgid "Edit"
+msgstr "Изменить"
+
+#: ../functions.php:703 ../functions.php:704
+msgid "View"
+msgstr "Просмотр"
+
+#: ../functions.php:705 ../functions.php:749 ../functions.php:795
+msgid "Search"
+msgstr "Поиск"
+
+#: ../functions.php:706 ../functions.php:707
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: ../functions.php:708
+msgid "Not Parent"
+msgstr "Не родитель"
+
+#: ../functions.php:746 ../functions.php:748 ../functions.php:765
+msgid "Properties"
+msgstr "Свойства"
+
+#: ../functions.php:747
+msgid "Property"
+msgstr "Свойство"
+
+#: ../functions.php:750 ../functions.php:796
+msgid "All"
+msgstr "Все"
+
+#: ../functions.php:751 ../functions.php:752 ../functions.php:797
+#: ../functions.php:798
+msgid "Parent"
+msgstr "Родитель"
+
+#: ../functions.php:754 ../functions.php:800
+msgid "Update"
+msgstr "Обновить"
+
+#: ../functions.php:756 ../functions.php:802
+msgid "New"
+msgstr "Добавить"
+
+#: ../functions.php:757 ../functions.php:803
+msgid "Popular"
+msgstr "Популярные"
+
+#: ../functions.php:758 ../functions.php:804
+msgid "Separate items with comas"
+msgstr "Разделить запятыми"
+
+#: ../functions.php:759 ../functions.php:805
+msgid "Add or remove"
+msgstr "Добавить или удалить"
+
+#: ../functions.php:760 ../functions.php:806
+msgid "Choose from the most used"
+msgstr "Выбрать из частоиспользуемых"
+
+#: ../functions.php:761 ../functions.php:807
+msgid "No found"
+msgstr "Не найдено"
+
+#: ../functions.php:792
+msgid "Product Categories"
+msgstr "Категории продукции"
+
+#: ../functions.php:793
+msgid "Category"
+msgstr "Категория"
+
+#: ../functions.php:794 ../functions.php:811
+msgid "Product Category"
+msgstr "Категория продукции"
+
+#: ../functions.php:901
+msgid "Views"
+msgstr "Просмотр"
+
+#: ../index.php:4
+msgid "Latest Posts"
+msgstr "Последние записи"
+
+#: ../loop.php:17 ../single.php:14
+msgid "Published by"
+msgstr "Записи автора "
+
+#: ../loop.php:18 ../single.php:15
+msgid "Leave your thoughts"
+msgstr "Добавить комментарий "
+
+#: ../loop.php:18 ../single.php:15
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: ../loop.php:18 ../single.php:15
+msgid "% Comments"
+msgstr "% комментариев"
+
+#: ../search.php:4
+#, php-format
+msgid "%s Search Results for "
+msgstr "Результаты поиска для %s"
+
+#: ../searchform.php:2
+msgid "To search, type and hit enter."
+msgstr "Для поиска введите текст и нажмите Enter"
+
+#: ../single.php:19
+msgid "Tags: "
+msgstr "Метки: "
+
+#: ../single.php:21
+msgid "Categorised in: "
+msgstr "Рубрика: "
+
+#: ../single.php:23
+msgid "This post was written by "
+msgstr "Эту запись добавил "
+
+#~ msgid "Archives"
+#~ msgstr "Архивы "
+
+#~ msgid "Author Archives for "
+#~ msgstr "Архивы записей автора "
+
+#~ msgid "Sorry, nothing to display."
+#~ msgstr "Извините, нечего показывать ;("
+
+#~ msgid "Powered by"
+#~ msgstr "Работает на "
+
+#~ msgid "Header Menu"
+#~ msgstr "Меню шапки"
+
+#~ msgid "Sidebar Menu"
+#~ msgstr "Меню сайдбара"
+
+#~ msgid "Extra Menu"
+#~ msgstr "Экстра менб"
+
+#~ msgid "Widget Area 1"
+#~ msgstr "Область виджетов 1"
+
+#~ msgid "Widget Area 2"
+#~ msgstr "Область виджетов 2"
+
+#~ msgid "View Article"
+#~ msgstr "Посмотреть запись"
+
+#~ msgid "HTML5 Blank Custom Post"
+#~ msgstr "Произвольная запись"
+
+#~ msgid "Add New HTML5 Blank Custom Post"
+#~ msgstr "Добавить новую индивидуальную запись"
+
+#~ msgid "Edit HTML5 Blank Custom Post"
+#~ msgstr "Редактировать  новую индивидуальную запись"
+
+#~ msgid "New HTML5 Blank Custom Post"
+#~ msgstr "Новая  индивидуальная запись"
+
+#~ msgid "View HTML5 Blank Custom Post"
+#~ msgstr "Посмотреть новую индивидуальную запись"
+
+#~ msgid "Search HTML5 Blank Custom Post"
+#~ msgstr "Найти новую индивидуальную запись"
+
+#~ msgid "No HTML5 Blank Custom Posts found"
+#~ msgstr "Не найдено индивидуальных записей"
+
+#~ msgid "No HTML5 Blank Custom Posts found in Trash"
+#~ msgstr "Корзина пуста"
+
+#~ msgid "Tag Archive: "
+#~ msgstr "Архив меток: "
+
+#~ msgid "%s results for "
+#~ msgstr "%s результаты"
