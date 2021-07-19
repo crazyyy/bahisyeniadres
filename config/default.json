@@ -1,6 +1,6 @@
 {
   "domain": "developnow.xyz",
-  "theme": "bahisyeniadres",
+  "theme": "bahisyeniadres-child",
   "path": {
     "base": {
       "src": "assets/",

@@ -1,6 +1,6 @@
 'use strict';
 /* if work with html set TRUE, else - FALSE */
-const htmlOWp = true;
+const htmlOWp = false;
 let env_prod = true;
 
 // TODO: add https://github.com/olegskl/gulp-stylelint
