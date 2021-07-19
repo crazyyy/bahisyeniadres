@@ -358,8 +358,11 @@ button.tie-popup-search-submit .tie-icon-spinner {
 
 @font-face {
   font-family: "tiefonticon";
-  src: url("../fonts/tielabs-fonticon/tielabs-fonticon.eot");
-  src: url("../fonts/tielabs-fonticon/tielabs-fonticon.eot#iefix") format("embedded-opentype"), url("../fonts/tielabs-fonticon/tielabs-fonticon.woff") format("woff"), url("../fonts/tielabs-fonticon/tielabs-fonticon.ttf") format("truetype"), url("../fonts/tielabs-fonticon/tielabs-fonticon.svg#tielabs-fonticon") format("svg");
+  src: url("../fonts/tielabs-fonticon.eot");
+  src: url("../fonts/tielabs-fonticon.eot#iefix") format("embedded-opentype"),
+  url("../fonts/tielabs-fonticon.woff") format("woff"),
+  url("../fonts/tielabs-fonticon.ttf") format("truetype"),
+  url("../fonts/tielabs-fonticon.svg#tielabs-fonticon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
