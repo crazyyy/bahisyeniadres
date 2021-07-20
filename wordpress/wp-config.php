@@ -26,7 +26,7 @@ define('DB_COLLATE', 'utf8mb4_unicode_ci');
 
 $table_prefix  = 'nammk_';
 
-define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', false);
 define('FS_METHOD', 'direct');
 
 define('AUTH_KEY',         'B]9_9_%uF{fdsasgC)pMx/?-+_bVjX;Xrib=1y23rgghdh3a+dadAEIZ1O/z^2Gv`<GLr<7hKI');

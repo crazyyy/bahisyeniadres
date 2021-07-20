@@ -3923,8 +3923,8 @@ function ampforwp_remove_rel_on_bp(){
 		}
 		// Removing AMP from WPForo Forums Pages #592
 		if(class_exists('wpForo')){
-			Global $post, $wpdb,$wpforo;
-			$foid = $post->ID;
+			global $wpdb,$wpforo;
+			$foid = ampforwp_get_the_ID();
 			$fid = $wpforo->pageid;
 			if($foid==$fid){
 				remove_action( 'wp_head', 'amp_frontend_add_canonical');
@@ -6853,14 +6853,8 @@ function ampforwp_check_excerpt(){
 // Back to top 
 add_action( 'ampforwp_body_beginning' ,'ampforwp_back_to_top_markup');
 function ampforwp_back_to_top_markup(){
-	global $redux_builder_amp;
 	if(true == ampforwp_get_setting('ampforwp-footer-top')){
-		echo '<div id="backtotop"></div>
-		<div id="marker">
-	      <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
-	        layout="nodisplay">
-	      </amp-position-observer>
-	    </div>';
+		echo '<div id="backtotop"></div>';
 	}
 }
 
@@ -7054,7 +7048,8 @@ add_action('upload_mimes', 'ampforwp_upload_svg');
 // Ajax functions
 add_action( 'wp_ajax_ampforwp_categories', 'ampforwp_ajax_cats' );
 function ampforwp_ajax_cats(){
-	if(!wp_verify_nonce($_GET['security'],'ampforwp-verify-request') ){
+	$ampforwp_nonce = wp_create_nonce( 'ampforwp-verify-request' );
+ 	if(!wp_verify_nonce($ampforwp_nonce,'ampforwp-verify-request') ){
 		echo json_encode(array('status'=>403,'message'=>'user request is not allowed')) ;
 		die;
 	}
@@ -7070,7 +7065,8 @@ function ampforwp_ajax_cats(){
 }
 add_action( 'wp_ajax_ampforwp_tags', 'ampforwp_ajax_tags' );
 function ampforwp_ajax_tags(){
-	if(!wp_verify_nonce($_GET['security'],'ampforwp-verify-request') ){
+	$ampforwp_nonce = wp_create_nonce( 'ampforwp-verify-request' );
+ 	if(!wp_verify_nonce($ampforwp_nonce,'ampforwp-verify-request') ){
 		echo json_encode(array('status'=>403,'message'=>'user request is not allowed')) ;
 		die;
 	}

@@ -1,0 +1,33 @@
+.search-form {
+  position: relative;
+
+  &__text {
+    @extend .inp;
+    padding-right: 50px;
+    border-radius: 4px;
+  }
+
+  &__submit {
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 1px;
+    width: 35px;
+    bottom: 1px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    @include opacity(.5);
+    @include transition(all .3s ease);
+
+    &:hover {
+      @include opacity(1);
+    }
+
+    &:after {
+      content: "\f002";
+      font: $fontAwesome;
+      color: #000;
+    }
+  }
+}

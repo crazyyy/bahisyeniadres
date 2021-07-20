@@ -443,10 +443,19 @@ class rsssl_letsencrypt_handler {
 						    }
 					    } catch ( Exception $e ) {
 						    error_log( print_r( $e, true ) );
+						    $error = $this->get_error( $e );
+
+						    //fixing a plesk bug
+						    if ( strpos($error, 'No order for ID ') !== FALSE){
+							    $error .= '&nbsp;'.__("Order ID mismatch, regenerate order.","really-simple-ssl");
+							    $order->clear();
+							    rsssl_progress_remove('dns-verification');
+							    $error .= '&nbsp;'.__("If you entered your DNS records before, they need to be changed.","really-simple-ssl");
+						    }
 						    $response = new RSSSL_RESPONSE(
 							    'error',
 							    'retry',
-							    $this->get_error( $e )
+							    $error
 						    );
 					    }
 				    }
@@ -750,6 +759,7 @@ class rsssl_letsencrypt_handler {
 
 	/**
 	 * Get the order object
+	 *
 	 * @return RSSSL_RESPONSE
 	 */
     public function get_order(){
@@ -1585,7 +1595,11 @@ class rsssl_letsencrypt_handler {
 		if (rsssl_is_ready_for('installation')) {
 			try {
 				if ( $server === 'cpanel' ) {
-					$response = rsssl_install_cpanel_default();
+					if ($type==='default') {
+						$response = rsssl_install_cpanel_default();
+					} else if ( function_exists('rsssl_install_cpanel_shell') ) {
+						$response = rsssl_install_cpanel_shell();
+					}
 
 					if ( $response->status === 'success' ) {
 						delete_option( "rsssl_le_start_installation" );

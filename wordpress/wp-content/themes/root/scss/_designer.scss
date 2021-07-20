@@ -1,0 +1,215 @@
+$the_designer_border: #bccae2;
+
+.the-designer {
+  margin-bottom: 30px;
+}
+
+.the-designer-block {
+  border: 1px dotted $the_designer_border;
+  padding: 10px;
+  margin: 15px 0;
+  background: #f0f7ff;
+  text-align: center;
+  font-size: 14px;
+  color: #5e7a9a;
+  cursor: pointer;
+  @include opacity(.8);
+
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+// block
+.the-designer-b {
+  position: relative;
+  margin: 5px -1px;
+  padding: 10px 0;
+  border: 1px dashed rgba( $the_designer_border, .8 );
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  &:hover {
+    border-color: rgba( $the_designer_border, 1 );
+  }
+
+  &.ui-sortable-placeholder {
+    background: #eee;
+  }
+}
+
+// tools
+.the-designer-t {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  background: rgba( $the_designer_border, .1 );
+  //@include translate(0, -100%);
+  z-index: 100;
+
+  &__move,
+  &__clone,
+  &__remove,
+  &__settings {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    @include opacity(.8);
+    cursor: pointer;
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+
+  &__move {
+    background: #eee url("../images/the-designer/icon-move.svg") center center no-repeat;
+    cursor: move;
+  }
+
+  &__clone {
+    background: #eee url("../images/the-designer/icon-clone.svg") center center no-repeat;
+  }
+
+  &__remove {
+    background: #eee url("../images/the-designer/icon-remove.svg") center center no-repeat;
+  }
+
+  &__settings {
+    background: #eee url("../images/the-designer/icon-settings.svg") center center no-repeat;
+  }
+}
+
+.the-designer-add {
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  background: rgba( $the_designer_border, .3 );
+}
+
+/********************************************************************
+ * The designer Modal
+ */
+.the-designer-o {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 99998;
+}
+
+.the-designer-m {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 30px;
+  background: #fff;
+  @include translate(-50%, -50%);
+  z-index: 99999;
+}
+
+
+/********************************************************************
+ * Add buttons
+ */
+.the-designer-add-block {
+  float: left;
+  width: 23%;
+  margin: 1%;
+  height: 100px;
+  border: 1px solid rgba($the_designer_border, .5);
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba($the_designer_border, 1);
+    background: rgba($the_designer_border, .3);
+  }
+}
+
+
+/********************************************************************
+ * Save button
+ */
+.the-designer-s {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: $the_designer_border;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+
+/********************************************************************
+ * Cols
+ */
+.td-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.td-col-1, .td-col-2, .td-col-3, .td-col-4, .td-col-5, .td-col-6, .td-col-7, .td-col-8, .td-col-9, .td-col-10, .td-col-11, .td-col-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .td-col-1, .td-col-2, .td-col-3, .td-col-4, .td-col-5, .td-col-6, .td-col-7, .td-col-8, .td-col-9, .td-col-10, .td-col-11, .td-col-12 {
+    float: left;
+  }
+  .td-col-12 {
+    width: 100%;
+  }
+  .td-col-11 {
+    width: 91.66666667%;
+  }
+  .td-col-10 {
+    width: 83.33333333%;
+  }
+  .td-col-9 {
+    width: 75%;
+  }
+  .td-col-8 {
+    width: 66.66666667%;
+  }
+  .td-col-7 {
+    width: 58.33333333%;
+  }
+  .td-col-6 {
+    width: 50%;
+  }
+  .td-col-5 {
+    width: 41.66666667%;
+  }
+  .td-col-4 {
+    width: 33.33333333%;
+  }
+  .td-col-3 {
+    width: 25%;
+  }
+  .td-col-2 {
+    width: 16.66666667%;
+  }
+  .td-col-1 {
+    width: 8.33333333%;
+  }
+}

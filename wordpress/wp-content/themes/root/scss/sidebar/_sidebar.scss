@@ -1,0 +1,231 @@
+/********************************************************************
+ * Sidebar
+ *******************************************************************/
+.widget {
+  margin-bottom: 35px;
+}
+
+.widget-header {
+  margin: 0 0 15px;
+  padding: 15px 0 14px;
+  font-weight: bold;
+  font-size: 110%;
+  border-bottom: 1px solid #dadada;
+}
+
+.widget ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+
+
+/********************************************************************
+ * Helper widget mobile hide
+ */
+.widget-mobile-hide {
+  @media (max-width: $max-lg) {
+    display: none;
+  }
+}
+
+
+/********************************************************************
+ * Categories
+ */
+.widget_categories,
+.widget_nav_menu,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_archive,
+.widget_meta {
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding: 6px 0 6px 25px;
+      border-bottom: 1px solid #eee;
+
+      &:before {
+        content: "\f105";
+        position: absolute;
+        top: 9px;
+        left: 3px;
+        font: normal normal normal 14px/1 FontAwesome;
+        color: #ccc;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul {
+        padding-left: 10px;
+
+
+        li {
+          padding-left: 0;
+          font-size: .9em;
+
+          &:before {
+            display: none;
+          }
+
+          a {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/********************************************************************
+ * Widget Search
+ */
+.widget_search {
+  padding: 0;
+  border: none;
+}
+
+
+/********************************************************************
+ * Subscribe
+ */
+.widget-subscribe {
+  padding: 4px;
+  background: url(../images/subscribe-bg.png);
+
+  &__i {
+    padding: 10px;
+    background: #fff;
+  }
+}
+
+
+/********************************************************************
+ * Widget articles
+ */
+.widget-article {
+  margin-bottom: 30px;
+  @include clearfix();
+
+  &__image {
+  }
+
+  &__body {
+
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  &__category {
+    font-size: .85em;
+
+    a {
+      color: #999;
+    }
+  }
+}
+
+.widget-article--compact {
+  margin-bottom: 15px;
+
+  .widget-article {
+
+    &__image {
+      float: left;
+      width: 80px;
+      margin-right: 15px;
+    }
+
+    &__body {
+      overflow: hidden;
+      line-height: 1.2;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+  }
+
+  .entry-meta {
+    margin-top: 5px;
+    margin-bottom: 0;
+
+    span:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+/********************************************************************
+ * Top Commentators
+ */
+.widget_top_commentators {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    li {
+      width: 33%;
+      padding: 0;
+      float: left;
+      text-align: center;
+      margin: 5px 0 17px;
+    }
+  }
+}
+
+.top-commentators {
+
+  &__name {
+    font-size: 90%;
+
+    .ps-link {
+
+    }
+  }
+
+  &__count {
+    color: rgba(0,0,0,.5);
+    font-size: 80%;
+
+    span {
+
+      &:before {
+        content: "\f0e5";
+        font: normal normal normal 12px/1 FontAwesome;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &__ava {
+
+    img {
+    }
+  }
+}

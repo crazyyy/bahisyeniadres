@@ -3,7 +3,7 @@
  * Plugin Name: Really Simple SSL
  * Plugin URI: https://really-simple-ssl.com
  * Description: Lightweight plugin without any setup to make your site SSL proof
- * Version: 5.0.2
+ * Version: 5.0.3
  * Author: Really Simple Plugins
  * Author URI: https://really-simple-plugins.com
  * License: GPL2
@@ -111,6 +111,7 @@ class REALLY_SIMPLE_SSL
 		define('rsssl_path', trailingslashit(plugin_dir_path(__FILE__)));
         define('rsssl_template_path', trailingslashit(plugin_dir_path(__FILE__)).'grid/templates/');
         define('rsssl_plugin', plugin_basename(__FILE__));
+        define('rsssl_add_on_version_requirement', '5.0');
         if (!defined('rsssl_file') ){
             define('rsssl_file', __FILE__);
         }
@@ -182,7 +183,7 @@ class REALLY_SIMPLE_SSL
 		) {
 			?>
 			<div id="message" class="error notice really-simple-plugins">
-				<h1><?php echo __("Plugin dependency error","really-simple-ssl-pro");?></h1>
+				<h1><?php echo __("Plugin dependency error","really-simple-ssl");?></h1>
 				<p><?php echo __("You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL.","really-simple-ssl");?></p>
 				<p><?php echo __("Please upgrade to the latest version to be able use the full functionality of the plugin.","really-simple-ssl");?></p>
 			</div>
