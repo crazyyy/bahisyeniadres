@@ -1,14 +1,54 @@
 /*
-Theme Name: Root Child
-Theme URI: https://wpshop.ru/themes/root
-Template: bahisyeniadres
-Author: WPShop
-Author URI: https://wpshop.ru/
+Theme Name: Bahisyeniadres Child Theme URI: https: //github.com/crazyyy/bahisyeniadres
+Template  : root Author: Vitalii A. Author URI: https: //github.com/crazyyy
 Description: The best premium eco-theme WP, SEO-optimized, adaptive, light and fast.
 Tags: premium,adaptive,seo
-Version: 3.0.0.1626373529
-Updated: 2021-07-15 21:25:29
+Version: 3.0.0.1626789578 Updated: 2021-07-20 16:59:38
 
 */
+body {
+  padding-top: 30px;
+}
 
-@import url('css/main.css');
+.site-header-inner {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+}
+
+#site-navigation {
+  background-color   : #002347;
+  /* box-shadow      : 0 1px 10px rgb(0 0 0 / 30%); */
+}
+
+.main-navigation ul {
+  border-bottom: 3px solid rgb(251 77 1);
+}
+
+.main-navigation ul li {
+  border-bottom: 0;
+}
+
+.main-navigation ul li.current-menu-item {
+  background: rgb(251 77 1);
+}
+
+.main-navigation ul li .removed-link:focus,
+.main-navigation ul li .removed-link:hover,
+.main-navigation ul li a:focus,
+.main-navigation ul li a:hover {
+  background: rgb(251 77 1);
+}
+
+.site-content {
+  background-color: #002347;
+}
+
+.site-footer-inner .footer-info {
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: center;
+  align-content  : center;
+  align-items    : center;
+}
+
+/* box-shadow: 0 1px 10px rgb(0 0 0 / 30%); */
