@@ -3,7 +3,7 @@
  *
  * @author Dmitry (dio) Levashov
  **/
-jQuery.fn.elfinderdialog = function(opts, fm) {
+ jQuery.fn.elfinderdialog = function(opts, fm) {
 	"use strict";
 	var platformWin = (window.navigator.platform.indexOf('Win') != -1),
 		delta       = {},
@@ -228,19 +228,6 @@ jQuery.fn.elfinderdialog = function(opts, fm) {
 								dialog.trigger('resize', {init: true});
 							}
 						});
-						titlebar.prepend(jQuery('<span class="ui-widget-header ui-corner-all elfinder-titlebar-button elfinder-titlebar-full"><span class="ui-icon ui-icon-plusthick"></span></span>')
-							.on('mousedown touchstart', function(e) {
-								var elm = jQuery(this);
-								e.preventDefault();
-								e.stopPropagation();
-								if (!dialog.hasClass('elfinder-maximized') && typeof elm.data('style') === 'undefined') {
-									self.height(self.height());
-									elm.data('style', self.attr('style') || '');
-								}
-								fm.toggleMaximize(dialog);
-								typeof(opts.maximize) === 'function' && opts.maximize.call(self[0]);
-							})
-						);
 					}
 					
 				},

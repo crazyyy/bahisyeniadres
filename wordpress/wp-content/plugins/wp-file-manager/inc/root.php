@@ -22,10 +22,10 @@ $settings = get_option('wp_file_manager_settings'); ?>
 <div class="wrap fm_rootWrap">
 <?php if (isset($_GET['status']) && $_GET['status'] == '1'):?>
 <div class="updated settings-error notice is-dismissible" id="setting-error-settings_updated"> 
-<p><strong><?php _e('Settings saved.', 'wp-file-manager-pro'); ?></strong></p><button id="ad_dismiss" class="notice-dismiss" type="button"><span class="screen-reader-text"><?php _e('Dismiss this notice.', 'wp-file-manager-pro'); ?></span></button></div>
+<p><strong><?php _e('Settings saved.', 'wp-file-manager'); ?></strong></p><button id="ad_dismiss" class="notice-dismiss" type="button"><span class="screen-reader-text"><?php _e('Dismiss this notice.', 'wp-file-manager-pro'); ?></span></button></div>
 <?php elseif (isset($_GET['status']) && $_GET['status'] == '2'):?>
 <div class="error updated settings-error notice is-dismissible" id="setting-error-settings_updated"> 
-<p><strong><?php _e('You have not made any changes to be saved.', 'wp-file-manager-pro'); ?></strong></p><button id="ad_dismiss" class="notice-dismiss" type="button"><span class="screen-reader-text"><?php _e('Dismiss this notice.', 'wp-file-manager-pro'); ?></span></button></div>
+<p><strong><?php _e('You have not made any changes to be saved.', 'wp-file-manager'); ?></strong></p><button id="ad_dismiss" class="notice-dismiss" type="button"><span class="screen-reader-text"><?php _e('Dismiss this notice.', 'wp-file-manager-pro'); ?></span></button></div>
 <?php endif; ?>
 <h3 class="fm_headingTitle"><?php _e('Preferences', 'wp-file-manager'); ?></h3>
 <?php $path = str_replace('\\', '/', ABSPATH); ?>
@@ -38,8 +38,8 @@ $settings = get_option('wp_file_manager_settings'); ?>
 <td>
 <input name="public_path" type="text" id="public_path" value="<?php echo isset($settings['public_path']) && !empty($settings['public_path']) ? $settings['public_path'] : $path; ?>" class="regular-text">
 <p class="description mb15"><?php _e('File Manager Root Path, you can change according to your choice.', 'wp-file-manager'); ?></p>
-<p><strong>Default:</strong> <code><?php echo $path; ?></code></p>
-<p style="color:#F00" class="description mb15"><?php _e('Please change this carefully, wrong path can lead file manager plugin to go down.', 'file-manager-advanced'); ?></p>
+<p><strong><?php _e('Default:', 'wp-file-manager'); ?></strong> <code><?php echo $path; ?></code></p>
+<p style="color:#F00" class="description mb15"><?php _e('Please change this carefully, wrong path can lead file manager plugin to go down.', 'wp-file-manager'); ?></p>
 </td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ $settings = get_option('wp_file_manager_settings'); ?>
 </td>
 </tr>
 </table>
-<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>
+<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'wp-file-manager'); ?>"></p>
 </form>
 </div>
 </div>

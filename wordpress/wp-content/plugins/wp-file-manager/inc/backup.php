@@ -747,7 +747,7 @@ a.close_dlt_success:active,a.close_dlt_success:hover  {
             <span class="styledCheckbox mrt10">
                 <input type="checkbox" value="<?php echo $backup->id;?>" name="backupids[]" class="backupids"> <span class="fm_checkmark"></span>
             </span>
-            <span class="chk-label"><?php echo date('j M, Y H:i A', strtotime($backupName)); ?> <?php echo ($todayDate == $compareDate) ? '(Today)' : '';?> </span>
+            <span class="chk-label"><?php echo date('j M, Y H:i A', strtotime($backupName)); ?> <?php echo ($todayDate == $compareDate) ? '('.__("Today", "wp-file-manager").')' : '';?> </span>
 		</div>
 		<div class="download bck_action">
 		<?php foreach($backupDirs as $backupDir) {
@@ -783,7 +783,7 @@ a.close_dlt_success:active,a.close_dlt_success:hover  {
 		<button class="exitBackBtn bkpCheckAll restore_btn <?php echo count($backups) == 0 ? 'disabled_btn' : '';?>"><?php _e('Select All', 'wp-file-manager'); ?></button>
         <button class="exitBackBtn bkpUnCheckAll log_btn disabled_btn"><?php _e('Deselect', 'wp-file-manager'); ?></button>	
 	</div>
-    <p><i><?php _e('<strong>Note:</strong> Backup files will be under <code>'.$backup_dirname.'</code>', 'wp-file-manager'); ?></i></p>	
+    <p><i><strong><?php _e('Note:', 'wp-file-manager'); ?></strong> <?php _e('Backup files will be under', 'wp-file-manager'); ?> <code><?php echo $backup_dirname; ?></code></i></p>	
 </div>
 <?php $wpfmbackup = wp_create_nonce( 'wpfmbackup' ); ?>
 <script>
@@ -800,7 +800,7 @@ jQuery(document).ready(function(){
         var fm_bkp_id = ''; // empty
         jQuery(".fmbkp_console_popup .close_fm_console").hide();
         jQuery('.fmbkp_console_popup').show();
-        jQuery('#fmbkp_console').show().html('<p class="backup_wait">Backup is running, please wait...</p>');
+        jQuery('#fmbkp_console').show().html('<p class="backup_wait"><?php _e("Backup is running, please wait","wp-file-manager");?>...</p>');
         wp_fm_backup(ajax_url, fm_bkp_database,fm_bkp_files,fm_bkp_plugins,fm_bkp_themes,fm_bkp_uploads,fm_bkp_other,fm_bkp_id);
   });
  function wp_fm_backup(ajax_url, fm_bkp_database,fm_bkp_files,fm_bkp_plugins,fm_bkp_themes,fm_bkp_uploads,fm_bkp_other,fm_bkp_id){
@@ -898,7 +898,7 @@ jQuery(".bkpDelete").click(function () {
     if(delarr == '') {
     alert('Select backup(s) to delete!');
     } else {
-        var r = confirm("Are you sure want to remove selected backup(s)?")
+        var r = confirm("<?php _e('Are you sure want to remove selected backup(s)?','wp-file-manager');?>")
         if (r == true) {
             jQuery.ajax({
                 type: "POST",

@@ -28,7 +28,7 @@
         <div class="wp_fm_lang" style="float:right">
             <h3 class="fm-topoption">
 
-                <span class="switch_txt_theme">Change Theme Here:</span>
+                <span class="switch_txt_theme"><?php _e('Change Theme Here:', 'wp-file-manager'); ?></span>
 
                 <select name="theme" id="fm_theme">
                     <option value="default" <?php echo (isset($_GET['theme']) && $_GET['theme'] == 'default') ? 'selected="selected"' : (($wp_fm_theme !== false) && $wp_fm_theme == 'default' ? 'selected="selected"' : ''); ?>>

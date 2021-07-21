@@ -2,9 +2,9 @@
 Contributors: mndpsingh287
 Tags: wp-file-manager, elfinder,file manager, ftp, wp-filemanager,file manager, wp-filemanager, Upload Files, WP File Manager, File Manage, Edit Files, Delete Files, FTP, filemanager, wpfilemanager, ftp, file transfer, update, create, delete, view, rename, editor, Cpanel, Control Panel, Admin, Shortcode, explorer, file explorer, filemanager
 Requires at least: 4.0
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 5.2.4
-Stable tag: 7.1.1
+Stable tag: 7.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,14 +46,14 @@ Key Features in the Free File Manager plugin include:
 * **FTP/SFTP Support**: Alternative to FTP or Cpanel
 * **File Preview**: preview for common MIMEs and file types
 * **Directory Size**: Calculate directory size
-* **Icon View***: List and Icons view available for files and files
-* **Keyboard shortcuts***: Keyboard shortcuts available e.g. copy,paste,drag & drop
+* **Icon View**: List and Icons view available for files and files
+* **Keyboard shortcuts**: Keyboard shortcuts available e.g. copy,paste,drag & drop
 * **Drag and drop**: File Drag & Drop file upload function available
 * **Functions Toolbar**: Rich context menu and file manager functions toolbar
 * **Thumbnails**: Thumbnails for all types of image files
 * **Upload to Media Library**: We have now included the ability to enable images, pdf's, and zip files to be uploaded to you folders and as well be available via the native Wordpress Media Library
 * **Backup/Restore**: Backup and restore themes files, plugins files,uploads folder and db data on server.
-* **Multi Languages Added
+* **Multi Languages Added**
 
 = Key Features in File Manager Pro Editions =
 
@@ -96,6 +96,7 @@ Key Features in the Free File Manager plugin include:
 <strong>[File Manager AWS S3](https://filemanagerpro.io/product/file-manager-aws-s3/?utm_source=Wordpress.org&utm_medium=Website&utm_campaign=File%20Manager%20Pro)</strong> provides you ability to edit, delete, upload, download, copy and paste files and folders in AWS S3 bucket.
 <strong>[File Manager Git](https://filemanagerpro.io/product/file-manager-git/?utm_source=Wordpress.org&utm_medium=Website&utm_campaign=File%20Manager%20Pro)</strong> Github integration for file manager.
 <strong>[File Manager Slack](https://filemanagerpro.io/product/file-manager-slack/?utm_source=Wordpress.org&utm_medium=Website&utm_campaign=File%20Manager%20Pro)</strong> Slack incoming webhook integration to file manager.
+<strong>[File Manager Google Cloud](https://filemanagerpro.io/product/file-manager-google-cloud/?utm_source=Wordpress.org&utm_medium=Website&utm_campaign=File%20Manager%20Pro)</strong> provides you ability to edit, delete, upload, download, copy and paste files and folders in Google Cloud bucket.
 
 
 == Installation ==
@@ -136,6 +137,13 @@ Yes, You can archive any files and folders as zip then simple download it. Pleas
 
 
 == Changelog ==
+
+= 7.1.2 (20th July, 2021) =
+
+* Checked compatibility with wordpress 5.8
+* Fixed minor bugs
+* Checked compatibility with Query Monitor plugin
+* Updated Translations
 
 = 7.1.1 (30th March, 2021) =
 

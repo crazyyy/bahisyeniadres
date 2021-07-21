@@ -14,6 +14,37 @@ body {
   box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
 }
 
+.header-buttons {
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: flex-end;
+  align-content  : center;
+  align-items    : center;
+}
+
+.header-buttons .header-buttons-button {
+  display       : inline-block;
+  position      : relative;
+  font-weight   : 700;
+  padding       : 10px 30px;
+  font-size     : 20px;
+  border-radius : 5px;
+  margin        : 5px 10px 0 -10px;
+  text-transform: uppercase;
+}
+
+.header-buttons .header-buttons-button-1 {
+  background-color: #fb4c01;
+  color           : #fff !important;
+  margin-right    : 5px;
+}
+
+.header-buttons .header-buttons-button-2 {
+  background-color: #fff;
+  color           : #023970 !important;
+  margin-left     : 5px;
+}
 #site-navigation {
   background-color   : #002347;
   /* box-shadow      : 0 1px 10px rgb(0 0 0 / 30%); */
@@ -38,10 +69,89 @@ body {
   background: rgb(251 77 1);
 }
 
+.head-after-block {
+  padding         : 15px 0;
+  margin          : 0;
+  background-color: #002347;
+}
+
+.head-after-block img {
+  width: 100%;
+}
+
+body.sidebar-none .entry-title {
+  max-width: 100%;
+  padding  : 0 30px;
+}
+
+body.sidebar-none .entry-content {
+  max-width: 100%;
+}
+
+.content-area {
+  width  : 100%;
+  padding: 0 40px;
+}
 .site-content {
   background-color: #002347;
 }
 
+.entry-title a {
+  color: #fff;
+}
+
+.post-box {
+  max-width: 100%;
+  clear    : both;
+}
+
+.entry-image {
+  margin-left : 0;
+  width       : 300px;
+  float       : left;
+  margin-right: 30px;
+
+}
+
+.entry-image img {
+  width: 100%;
+}
+
+.entry-image--no-thumb .entry-image__title h1 {
+  color: #fff;
+}
+
+.entry-image--no-thumb .entry-image__title {
+  background-image: none;
+}
+
+.site-footer {
+  margin-bottom: 30px;
+}
+
+.site-footer-inner {
+  display        : flex;
+  flex-direction : column;
+  flex-wrap      : wrap;
+  justify-content: center;
+  align-content  : center;
+  align-items    : center;
+}
+
+.site-footer-inner .footer-image {
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: center;
+  align-content  : center;
+  align-items    : center;
+  width          : 100%;
+  margin-bottom  : 20px;
+}
+
+.site-footer-inner .footer-image img {
+  width: 40px;
+}
 .site-footer-inner .footer-info {
   display        : flex;
   flex-direction : row;
@@ -49,6 +159,7 @@ body {
   justify-content: center;
   align-content  : center;
   align-items    : center;
+    padding-right: 0;
 }
 
 /* box-shadow: 0 1px 10px rgb(0 0 0 / 30%); */

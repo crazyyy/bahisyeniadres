@@ -1,13 +1,13 @@
-
-
 AddDefaultCharset utf-8
 php_value memory_limit 512M
+
 # supress php errors
 php_flag display_startup_errors off
 php_flag display_errors off
 php_flag html_errors off
 php_value docref_root 0
 php_value docref_ext 0
+
 # enable PHP error logging
 php_flag  log_errors on
 php_value error_log  /PHP_errors.log
@@ -302,3 +302,23 @@ ExpiresByType application/font-woff2                "access plus 1 month"
 ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
 </IfModule>
+
+# BEGIN ZOTYA htaccess protect
+# Директивы (строки) между `BEGIN ZOTYA htaccess protect` и `END ZOTYA htaccess protect`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+	# Stop Apache from serving .ht* files
+	<Files ~ "^\.ht">
+	Order allow,deny
+	Deny from all
+	</Files>
+	AuthUserFile /home/developnow.xyz/git/wordpress/.htpasswd
+	AuthType basic
+	AuthName "Restricted"
+	require valid-user
+	ErrorDocument 401 "Authorization Required"
+	<Files admin-ajax.php>
+	order allow,deny
+	allow from all
+	</Files>
+# END ZOTYA htaccess protect

@@ -4,7 +4,7 @@
   Plugin URI: https://wordpress.org/plugins/wp-file-manager
   Description: Manage your WP files.
   Author: mndpsingh287
-  Version: 7.1.1
+  Version: 7.1.2
   Author URI: https://profiles.wordpress.org/mndpsingh287
   License: GPLv2
  **/
@@ -16,7 +16,7 @@ if (!class_exists('mk_file_folder_manager')):
     class mk_file_folder_manager
     {
         protected $SERVER = 'http://ikon.digital/plugindata/api.php';
-        var $ver = '7.1.1';
+        var $ver = '7.1.2';
         /* Auto Load Hooks */
         public function __construct()
         {
@@ -116,49 +116,49 @@ if (!class_exists('mk_file_folder_manager')):
                     include('classes/db-restore.php');
                     $restoreDatabase = new Restore_Database($fmbkp->backup_name.'-db.sql.gz');
                     if($restoreDatabase->restoreDb()) {
-                      $result[] = 'Database backup restored successfully.';
+                      $result[] = __('Database backup restored successfully.','wp-file-manager');
                     } else {
-                      $result[] = 'Unable to restore DB backup.'; 
+                      $result[] = __('Unable to restore DB backup.','wp-file-manager'); 
                     }
                 }                
                 // case 2 - Plugins
                 if(file_exists($backup_dirname.$fmbkp->backup_name.'-plugins.zip')) {
                     $restorePlugins = $restoreFiles->extract($backup_dirname.$fmbkp->backup_name.'-plugins.zip',$filesDestination.'plugins');
                     if($restorePlugins) {
-                      $result[] = 'Plugins backup restored successfully.';  
+                      $result[] = __('Plugins backup restored successfully.','wp-file-manager');  
                     } else {
-                      $result[] = 'Unable to restore plugins.';  
+                      $result[] = __('Unable to restore plugins.','wp-file-manager');  
                     }                                      
                 }
                 // case 3 - Themes
                 if(file_exists($backup_dirname.$fmbkp->backup_name.'-themes.zip')) {
                     $restoreThemes = $restoreFiles->extract($backup_dirname.$fmbkp->backup_name.'-themes.zip',$filesDestination.'themes');
                     if($restoreThemes) {
-                      $result[] = 'Themes backup restored successfully.'; 
+                      $result[] = __('Themes backup restored successfully.','wp-file-manager'); 
                     } else {
-                      $result[] = 'Unable to restore themes.';  
+                      $result[] = __('Unable to restore themes.','wp-file-manager');  
                     }                
                 }
                 // case 4 - Uploads
                 if(file_exists($backup_dirname.$fmbkp->backup_name.'-uploads.zip')) {
                     $restoreUploads = $restoreFiles->extract($backup_dirname.$fmbkp->backup_name.'-uploads.zip',$filesDestination.'uploads');
                     if($restoreUploads) {
-                      $result[] = 'Uploads backup restored successfully.'; 
+                      $result[] = __('Uploads backup restored successfully.','wp-file-manager'); 
                     } else {
-                      $result[] = 'Unable to restore uploads.';  
+                      $result[] = __('Unable to restore uploads.','wp-file-manager');
                     }                    
                 }
                 // case 5 - Others
                 if(file_exists($backup_dirname.$fmbkp->backup_name.'-others.zip')) {
                     $restoreOthers = $restoreFiles->extract($backup_dirname.$fmbkp->backup_name.'-others.zip',$filesDestination);
                     if($restoreOthers) {
-                      $result[] = 'Others backup restored successfully.';  
+                      $result[] = __('Others backup restored successfully.','wp-file-manager');
                     } else {
-                      $result[] = 'Unable to restore others.';  
+                      $result[] = __('Unable to restore others.','wp-file-manager');
                     }                  
                 }
             } else {
-                $result[] = 'Backup not found!';
+                $result[] = __('Backup not found!','wp-file-manager');
             }
              echo (implode(',', $result));
             die;
@@ -200,9 +200,10 @@ if (!class_exists('mk_file_folder_manager')):
                 }
             }
             if($isRemoved) {
-                echo 'Backups removed successfully!';
+                
+                echo __('Backups removed successfully!','wp-file-manager');
             } else {
-                echo 'Unable to removed backup!'; 
+                echo __('Unable to removed backup!','wp-file-manager'); 
             }
             die;
         }
@@ -224,33 +225,33 @@ if (!class_exists('mk_file_folder_manager')):
                     $fmbkp = $wpdb->get_row('select * from '.$fmdb.' where id = "'.$bkpId.'"');
                     if(file_exists($backup_dirname.$fmbkp->backup_name.'-db.sql.gz')) {
                         $size = filesize($backup_dirname.$fmbkp->backup_name.'-db.sql.gz');
-                        $logs[] = 'Database backup done on date '.$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-db.sql.gz) ('.$this->formatSizeUnits($size).')';
+                        $logs[] = __('Database backup done on date ', 'wp-file-manager').$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-db.sql.gz) ('.$this->formatSizeUnits($size).')';
                     }                    
                     if(file_exists($backup_dirname.$fmbkp->backup_name.'-plugins.zip')) {
                         $size = filesize($backup_dirname.$fmbkp->backup_name.'-plugins.zip');
-                        $logs[] = 'Plugins backup done on date '.$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-plugins.zip) ('.$this->formatSizeUnits($size).')';
+                        $logs[] = __('Plugins backup done on date ', 'wp-file-manager').$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-plugins.zip) ('.$this->formatSizeUnits($size).')';
                     }
                     if(file_exists($backup_dirname.$fmbkp->backup_name.'-themes.zip')) {
                         $size = filesize($backup_dirname.$fmbkp->backup_name.'-themes.zip');
-                        $logs[] = 'Themes backup done on date '.$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-themes.zip) ('.$this->formatSizeUnits($size).')';
+                        $logs[] = __('Themes backup done on date ', 'wp-file-manager').$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-themes.zip) ('.$this->formatSizeUnits($size).')';
                     }
                     if(file_exists($backup_dirname.$fmbkp->backup_name.'-uploads.zip')) {
                         $size = filesize($backup_dirname.$fmbkp->backup_name.'-uploads.zip');
-                        $logs[] = 'Uploads backup done on date '.$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-uploads.zip) ('.$this->formatSizeUnits($size).')';
+                        $logs[] = __('Uploads backup done on date ', 'wp-file-manager').$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-uploads.zip) ('.$this->formatSizeUnits($size).')';
                     }
                     if(file_exists($backup_dirname.$fmbkp->backup_name.'-others.zip')) {
                         $size = filesize($backup_dirname.$fmbkp->backup_name.'-others.zip');
-                        $logs[] = 'Others backup done on date '.$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-others.zip) ('.$this->formatSizeUnits($size).')';
+                        $logs[] = __('Others backup done on date ', 'wp-file-manager').$fmbkp->backup_date.' ('.$fmbkp->backup_name.'-others.zip) ('.$this->formatSizeUnits($size).')';
                     }
             }
             $count = 1;
-            $logMessage = '<h3 class="fm_console_log_pop log_msg_align_center">Logs</h3>';
+            $logMessage = '<h3 class="fm_console_log_pop log_msg_align_center">'.__('Logs', 'wp-file-manager').'</h3>';
             if(isset($logs)) {
                 foreach($logs as $log) {
                     $logMessage .= '<p class="fm_console_success">('.$count++.') '.$log.'</p>';
                 }
             } else {
-                $logMessage .= '<p class="fm_console_error">No logs found!</p>';
+                $logMessage .= '<p class="fm_console_error">'.__('No logs found!', 'wp-file-manager').'</p>';
             }
             echo $logMessage;
             die; 
@@ -321,9 +322,9 @@ if (!class_exists('mk_file_folder_manager')):
                     $isRemoved = true;
             }
             if($isRemoved) {
-                echo 'Backup removed successfully!';
+                echo __('Backup removed successfully!','wp-file-manager');
             } else {
-                echo 'Unable to removed backup!'; 
+                echo __('Unable to removed backup!','wp-file-manager'); 
             }
             die;
         }
@@ -337,7 +338,6 @@ if (!class_exists('mk_file_folder_manager')):
             $date = date('Y-m-d H:i:s');
             $file_number = 'backup_'.date('Y_m_d_H_i_s-').rand(0,9999);
             $nonce = $_POST['nonce'];
-            $type = sanitize_text_field($_POST['type']);
             $database = sanitize_text_field($_POST['database']);
             $files = sanitize_text_field($_POST['files']);
             $plugins = sanitize_text_field($_POST['plugins']);
@@ -346,7 +346,7 @@ if (!class_exists('mk_file_folder_manager')):
             $others = sanitize_text_field($_POST['others']);
             $bkpid = isset($_POST['bkpid']) ? sanitize_text_field($_POST['bkpid']) : '';
             if($database == 'false' && $files == 'false' && $bkpid == '') {
-                echo json_encode(array('step' => '0', 'database' => 'false','files' => 'false','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => '0', 'msg' => '<span class="fm_console_error">Nothing selected for backup</span>'));
+                echo json_encode(array('step' => '0', 'database' => 'false','files' => 'false','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => '0', 'msg' => __('<span class="fm_console_error">Nothing selected for backup</span>','wp-file-manager')));
                 die; 
             }
             if($bkpid == '') {
@@ -366,7 +366,7 @@ if (!class_exists('mk_file_folder_manager')):
                 $id = $bkpid;
             }
             if ( ! wp_verify_nonce( $nonce, 'wpfmbackup' ) ) {
-                echo json_encode(array('step' => 0, 'msg' => '<span class="fm_console_error">Security Issue.</span>'));
+                echo json_encode(array('step' => 0, 'msg' => __('<span class="fm_console_error">Security Issue.</span>', 'wp-file-manager')));
             } else {
               $fileName = $wpdb->get_row("select * from ".$fmdb." where id='".$id."'");              
                 //database
@@ -375,10 +375,10 @@ if (!class_exists('mk_file_folder_manager')):
                     $backupDatabase = new Backup_Database($fileName->backup_name);
                     $result = $backupDatabase->backupTables(TABLES);
                     if($result == '1'){
-                        echo json_encode(array('step' => 1, 'database' => 'false','files' => $files,'plugins' => $plugins,'themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id,'msg' => '<span class="fm_console_success">Database backup done.</span>'));  
+                        echo json_encode(array('step' => 1, 'database' => 'false','files' => $files,'plugins' => $plugins,'themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id,'msg' => __('<span class="fm_console_success">Database backup done.</span>', 'wp-file-manager')));  
                         die;
                     } else {
-                        echo json_encode(array('step' => 1, 'database' => 'false','files' => $files,'plugins' => $plugins,'themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id, 'msg' => '<span class="fm_console_error">Unable to create database backup.</span>'));   
+                        echo json_encode(array('step' => 1, 'database' => 'false','files' => $files,'plugins' => $plugins,'themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id, 'msg' => __('<span class="fm_console_error">Unable to create database backup.</span>', 'wp-file-manager')));   
                         die;
                     }                   
                 }
@@ -392,10 +392,10 @@ if (!class_exists('mk_file_folder_manager')):
                         $plugin_dir = WP_PLUGIN_DIR;                    
                         $backup_plugins = $filesBackup->zipData( $plugin_dir,$backup_dirname.'/'.$fileName->backup_name.'-plugins.zip');
                         if($backup_plugins) {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id, 'msg' => '<span class="fm_console_success">Plugins backup done.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others,'bkpid' => $id, 'msg' => __('<span class="fm_console_success">Plugins backup done.</span>', 'wp-file-manager')));
                             die;
                         } else {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => '<span class="fm_console_error">Plugins backup failed.</span>')); 
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => __('<span class="fm_console_error">Plugins backup failed.</span>', 'wp-file-manager'))); 
                             die;
                         }
                      } 
@@ -404,10 +404,10 @@ if (!class_exists('mk_file_folder_manager')):
                         $themes_dir = get_theme_root();
                         $backup_themes = $filesBackup->zipData( $themes_dir,$backup_dirname.'/'.$fileName->backup_name.'-themes.zip');
                         if($backup_themes) {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => '<span class="fm_console_success">Themes backup done.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => __('<span class="fm_console_success">Themes backup done.</span>', 'wp-file-manager')));
                             die;
                         } else {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => '<span class="fm_console_error">Themes backup failed.</span>')); 
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => $themes, 'uploads'=> $uploads, 'others' => $others, 'bkpid' => $id, 'msg' => __('<span class="fm_console_error">Themes backup failed.</span>', 'wp-file-manager'))); 
                             die;
                         }
                      }
@@ -417,10 +417,10 @@ if (!class_exists('mk_file_folder_manager')):
                         $uploads_dir = $wpfm_upload_dir['basedir'];
                         $backup_uploads = $filesBackup->zipData( $uploads_dir,$backup_dirname.'/'.$fileName->backup_name.'-uploads.zip');
                         if($backup_uploads) {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => $others, 'bkpid' => $id, 'msg' => '<span class="fm_console_success">Uploads backup done.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => $others, 'bkpid' => $id, 'msg' => __('<span class="fm_console_success">Uploads backup done.</span>', 'wp-file-manager')));
                             die;
                         } else {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => $others, 'bkpid' => $id, 'msg' => '<span class="fm_console_error">Uploads backup failed.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => $others, 'bkpid' => $id, 'msg' => __('<span class="fm_console_error">Uploads backup failed.</span>', 'wp-file-manager')));
                             die;
                         }
                      } 
@@ -429,18 +429,18 @@ if (!class_exists('mk_file_folder_manager')):
                         $others_dir = WP_CONTENT_DIR;
                         $backup_others = $filesBackup->zipOther( $others_dir,$backup_dirname.'/'.$fileName->backup_name.'-others.zip');
                         if($backup_others) {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => $id, 'msg' => '<span class="fm_console_success">Others backup done.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => $id, 'msg' => __('<span class="fm_console_success">Others backup done.</span>', 'wp-file-manager')));
                             die; 
                         } else {
-                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => $id, 'msg' => '<span class="fm_console_error">Others backup failed.</span>'));
+                            echo json_encode(array('step' => 1, 'database' => 'false','files' => 'true','plugins' => 'false','themes' => 'false', 'uploads'=> 'false', 'others' => 'false', 'bkpid' => $id, 'msg' => __('<span class="fm_console_error">Others backup failed.</span>', 'wp-file-manager')));
                             
                         }                        
                      } else {
-                        echo json_encode(array('step' => 0, 'database' => 'false', 'files' => 'false','plugins' => 'false','themes' => 'false','uploads'=> 'false','others' => 'false', 'bkpid' => $id, 'msg' => '<span class="fm_console_success">All Done</span>'));                        
+                        echo json_encode(array('step' => 0, 'database' => 'false', 'files' => 'false','plugins' => 'false','themes' => 'false','uploads'=> 'false','others' => 'false', 'bkpid' => $id, 'msg' => __('<span class="fm_console_success">All Done</span>', 'wp-file-manager')));                        
                         die;
                      }
                 } else {
-                 echo json_encode(array('step' => 0, 'database' => 'false', 'files' => 'false','plugins' => 'false','themes' => 'false','uploads'=> 'false','others' => 'false','bkpid' => $id, 'msg' => '<span class="fm_console_success">All Done</span>'));
+                 echo json_encode(array('step' => 0, 'database' => 'false', 'files' => 'false','plugins' => 'false','themes' => 'false','uploads'=> 'false','others' => 'false','bkpid' => $id, 'msg' => __('<span class="fm_console_success">All Done</span>', 'wp-file-manager')));
                 }
             }
             die;

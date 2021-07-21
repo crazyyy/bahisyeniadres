@@ -447,7 +447,7 @@ button.ui-button-text.check-syntax-cta:hover {
 }
 
 #wp_file_manager .ui-dialog.elfinder-to-editing.elfinder-dialog-edit {
-	z-index: 10 !important;
+	z-index: 99 !important;
 }
 
 .elfinder-dialog.elfinder-to-editing.elfinder-maximized{ min-height: inherit !important; }

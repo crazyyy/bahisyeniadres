@@ -1,0 +1,207 @@
+0000.001 (0) Opened log file at time: Wed, 21 Jul 2021 10:20:43 +0000 on https://developnow.xyz
+0000.003 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.59 WP: 5.8 PHP: 7.4.21 (litespeed, Linux cyberpanel-ubuntu-s-2vcpu-4gb-intel-ams3-01 5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021 x86_64) MySQL: 10.3.29-MariaDB-0ubuntu0.20.04.1 (max packet size=16777216) WPLANG: ru_RU Server: LiteSpeed safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 16.5M | 18M) multisite: N openssl: OpenSSL 1.1.1f  31 Mar 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.005 (0) Free space on disk containing Updraft's temporary directory: 31652.5 MB
+0000.007 (0) Tasks: Backup files: 0 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.010 (0) Requesting semaphore lock (d) (apparently not via scheduler)
+0000.012 (0) Set semaphore last lock (d) time to 2021-07-21 10:20:43
+0000.014 (0) Semaphore lock (d) complete
+0000.017 (0) Backup run: resumption=0, nonce=d5a367a5974e, file_nonce=d5a367a5974e begun at=1626862843 (0s ago), job type=backup
+0000.018 (0) Scheduling a resumption (1) after 300 seconds (1626863143) in case this run gets aborted
+0000.045 (0) This backup run is not intended for files - skipping
+0000.046 (0) Beginning creation of database dump (WordPress DB)
+0000.048 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.049 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0000.059 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `nammk_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\n (truncated - 1534 bytes total)
+0000.060 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0000.064 (0) Table nammk_options: Total expected rows (approximate): 530
+0000.156 (0) Table nammk_options: Rows added in this batch (next record: 3065): 526 (uncompressed bytes in this segment=1472442) in 0.09 seconds
+0000.159 (0) Table nammk_options: finishing file(s) (2, 343.6 KB)
+0000.161 (0) Table nammk_users: Total expected rows (approximate): 2
+0000.162 (0) Table nammk_users: Rows added in this batch (next record: 4): 2 (uncompressed bytes in this segment=1577) in 0.00 seconds
+0000.169 (0) Table nammk_users: finishing file(s) (2, 0.7 KB)
+0000.172 (0) Table nammk_usermeta: Total expected rows (approximate): 66
+0000.175 (0) Table nammk_usermeta: Rows added in this batch (next record: 139): 66 (uncompressed bytes in this segment=5663) in 0.00 seconds
+0000.186 (0) Table nammk_usermeta: finishing file(s) (2, 2.2 KB)
+0000.190 (0) Table nammk_commentmeta: Total expected rows (approximate): 0
+0000.194 (0) Table nammk_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=702) in 0.00 seconds
+0000.201 (0) Table nammk_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.204 (0) Table nammk_comments: Total expected rows (approximate): 0
+0000.209 (0) Table nammk_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1679) in 0.00 seconds
+0000.217 (0) Table nammk_comments: finishing file(s) (2, 0.5 KB)
+0000.221 (0) Table nammk_links: Total expected rows (approximate): 0
+0000.225 (0) Table nammk_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1284) in 0.00 seconds
+0000.231 (0) Table nammk_links: finishing file(s) (2, 0.5 KB)
+0000.233 (0) Table nammk_postmeta: Total expected rows (approximate): 692
+0000.256 (0) Table nammk_postmeta: Rows added in this batch (next record: 870): 692 (uncompressed bytes in this segment=45539) in 0.02 seconds
+0000.259 (0) Table nammk_postmeta: finishing file(s) (2, 7.4 KB)
+0000.261 (0) Table nammk_posts: Total expected rows (approximate): 109
+0000.271 (0) Table nammk_posts: Rows added in this batch (next record: 162): 109 (uncompressed bytes in this segment=152773) in 0.01 seconds
+0000.273 (0) Table nammk_posts: finishing file(s) (2, 27.6 KB)
+0000.275 (0) Table nammk_term_relationships: Total expected rows (approximate): 28
+0000.277 (0) Table nammk_term_relationships: Rows added in this batch (next record: 100000): 28 (uncompressed bytes in this segment=1080) in 0.00 seconds
+0000.278 (0) Table nammk_term_relationships: finishing file(s) (2, 0.4 KB)
+0000.280 (0) Table nammk_term_taxonomy: Total expected rows (approximate): 3
+0000.282 (0) Table nammk_term_taxonomy: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=997) in 0.00 seconds
+0000.284 (0) Table nammk_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0000.285 (0) Table nammk_termmeta: Total expected rows (approximate): 0
+0000.287 (0) Table nammk_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=675) in 0.00 seconds
+0000.289 (0) Table nammk_termmeta: finishing file(s) (2, 0.4 KB)
+0000.290 (0) Table nammk_terms: Total expected rows (approximate): 3
+0000.292 (0) Table nammk_terms: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=819) in 0.00 seconds
+0000.293 (0) Table nammk_terms: finishing file(s) (2, 0.5 KB)
+0000.294 (0) Table nammk_admin_columns: Total expected rows (approximate): 0
+0000.296 (0) Table nammk_admin_columns: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=961) in 0.00 seconds
+0000.297 (0) Table nammk_admin_columns: finishing file(s) (2, 0.4 KB)
+0000.299 (0) Table nammk_aiowps_events: Total expected rows (approximate): 0
+0000.301 (0) Table nammk_aiowps_events: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=799) in 0.00 seconds
+0000.302 (0) Table nammk_aiowps_events: finishing file(s) (2, 0.4 KB)
+0000.303 (0) Table nammk_aiowps_failed_logins: Total expected rows (approximate): 59
+0000.306 (0) Table nammk_aiowps_failed_logins: Rows added in this batch (next record: 59): 59 (uncompressed bytes in this segment=4197) in 0.00 seconds
+0000.308 (0) Table nammk_aiowps_failed_logins: finishing file(s) (2, 1.3 KB)
+0000.309 (0) Table nammk_aiowps_global_meta: Total expected rows (approximate): 0
+0000.312 (0) Table nammk_aiowps_global_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1166) in 0.00 seconds
+0000.314 (0) Table nammk_aiowps_global_meta: finishing file(s) (2, 0.4 KB)
+0000.315 (0) Table nammk_aiowps_login_activity: Total expected rows (approximate): 0
+0000.317 (0) Table nammk_aiowps_login_activity: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=805) in 0.00 seconds
+0000.318 (0) Table nammk_aiowps_login_activity: finishing file(s) (2, 0.4 KB)
+0000.320 (0) Table nammk_aiowps_login_lockdown: Total expected rows (approximate): 3
+0000.322 (0) Table nammk_aiowps_login_lockdown: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1166) in 0.00 seconds
+0000.323 (0) Table nammk_aiowps_login_lockdown: finishing file(s) (2, 0.5 KB)
+0000.325 (0) Table nammk_aiowps_permanent_block: Total expected rows (approximate): 0
+0000.326 (0) Table nammk_aiowps_permanent_block: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=833) in 0.00 seconds
+0000.328 (0) Table nammk_aiowps_permanent_block: finishing file(s) (2, 0.4 KB)
+0000.329 (0) Table nammk_blc_filters: Total expected rows (approximate): 0
+0000.330 (0) Table nammk_blc_filters: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=555) in 0.00 seconds
+0000.332 (0) Table nammk_blc_filters: finishing file(s) (2, 0.3 KB)
+0000.333 (0) Table nammk_blc_instances: Total expected rows (approximate): 1
+0000.335 (0) Table nammk_blc_instances: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1348) in 0.00 seconds
+0000.336 (0) Table nammk_blc_instances: finishing file(s) (2, 0.6 KB)
+0000.337 (0) Table nammk_blc_links: Total expected rows (approximate): 1
+0000.339 (0) Table nammk_blc_links: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=3349) in 0.00 seconds
+0000.340 (0) Table nammk_blc_links: finishing file(s) (2, 1.3 KB)
+0000.341 (0) Table nammk_blc_synch: Total expected rows (approximate): 27
+0000.343 (0) Table nammk_blc_synch: Rows added in this batch (next record: 1000): 27 (uncompressed bytes in this segment=1811) in 0.00 seconds
+0000.344 (0) Table nammk_blc_synch: finishing file(s) (2, 0.6 KB)
+0000.346 (0) Table nammk_db7_forms: Total expected rows (approximate): 0
+0000.347 (0) Table nammk_db7_forms: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=585) in 0.00 seconds
+0000.349 (0) Table nammk_db7_forms: finishing file(s) (2, 0.4 KB)
+0000.350 (0) Table nammk_tm_taskmeta: Total expected rows (approximate): 0
+0000.352 (0) Table nammk_tm_taskmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=687) in 0.00 seconds
+0000.354 (0) Table nammk_tm_taskmeta: finishing file(s) (2, 0.4 KB)
+0000.355 (0) Table nammk_tm_tasks: Total expected rows (approximate): 0
+0000.357 (0) Table nammk_tm_tasks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=892) in 0.00 seconds
+0000.358 (0) Table nammk_tm_tasks: finishing file(s) (2, 0.4 KB)
+0000.359 (0) Table nammk_wpfm_backup: Total expected rows (approximate): 0
+0000.360 (0) Table nammk_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=546) in 0.00 seconds
+0000.362 (0) Table nammk_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0000.363 (0) Table nammk_yoast_indexable: Total expected rows (approximate): 84
+0000.368 (0) Table nammk_yoast_indexable: Rows added in this batch (next record: 96): 84 (uncompressed bytes in this segment=48136) in 0.00 seconds
+0000.370 (0) Table nammk_yoast_indexable: finishing file(s) (2, 6.9 KB)
+0000.371 (0) Table nammk_yoast_indexable_hierarchy: Total expected rows (approximate): 81
+0000.373 (0) Table nammk_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 81 (uncompressed bytes in this segment=2107) in 0.00 seconds
+0000.376 (0) Table nammk_yoast_indexable_hierarchy: finishing file(s) (2, 0.6 KB)
+0000.378 (0) Table nammk_yoast_migrations: Total expected rows (approximate): 21
+0000.379 (0) Table nammk_yoast_migrations: Rows added in this batch (next record: 21): 21 (uncompressed bytes in this segment=1165) in 0.00 seconds
+0000.380 (0) Table nammk_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0000.382 (0) Table nammk_yoast_primary_term: Total expected rows (approximate): 1
+0000.383 (0) Table nammk_yoast_primary_term: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1007) in 0.00 seconds
+0000.385 (0) Table nammk_yoast_primary_term: finishing file(s) (2, 0.5 KB)
+0000.386 (0) Table nammk_yoast_seo_links: Total expected rows (approximate): 1
+0000.388 (0) Table nammk_yoast_seo_links: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1368) in 0.00 seconds
+0000.389 (0) Table nammk_yoast_seo_links: finishing file(s) (2, 0.6 KB)
+0000.391 (0) Table nammk_yoast_seo_meta: Total expected rows (approximate): 1
+0000.392 (0) Table nammk_yoast_seo_meta: Rows added in this batch (next record: 35): 1 (uncompressed bytes in this segment=631) in 0.00 seconds
+0000.394 (0) Table nammk_yoast_seo_meta: finishing file(s) (2, 0.4 KB)
+0000.395 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_options.table.tmpr3066.gz (1/33/fopen): adding to final database dump
+0000.403 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_options.table.gz (2/33/fopen): adding to final database dump
+0000.404 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_users.table.tmpr5.gz (3/33/fopen): adding to final database dump
+0000.405 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_users.table.gz (4/33/fopen): adding to final database dump
+0000.405 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_usermeta.table.tmpr140.gz (5/33/fopen): adding to final database dump
+0000.406 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_usermeta.table.gz (6/33/fopen): adding to final database dump
+0000.406 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_commentmeta.table.tmpr0.gz (7/33/fopen): adding to final database dump
+0000.406 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_commentmeta.table.gz (8/33/fopen): adding to final database dump
+0000.407 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_comments.table.tmpr0.gz (9/33/fopen): adding to final database dump
+0000.407 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_comments.table.gz (10/33/fopen): adding to final database dump
+0000.407 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_links.table.tmpr0.gz (11/33/fopen): adding to final database dump
+0000.408 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_links.table.gz (12/33/fopen): adding to final database dump
+0000.408 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_postmeta.table.tmpr871.gz (13/33/fopen): adding to final database dump
+0000.409 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_postmeta.table.gz (14/33/fopen): adding to final database dump
+0000.409 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_posts.table.tmpr163.gz (15/33/fopen): adding to final database dump
+0000.410 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_posts.table.gz (16/33/fopen): adding to final database dump
+0000.410 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_term_relationships.table.tmpr100001.gz (17/33/fopen): adding to final database dump
+0000.411 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_term_relationships.table.gz (18/33/fopen): adding to final database dump
+0000.411 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_term_taxonomy.table.tmpr4.gz (19/33/fopen): adding to final database dump
+0000.412 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_term_taxonomy.table.gz (20/33/fopen): adding to final database dump
+0000.412 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_termmeta.table.tmpr0.gz (21/33/fopen): adding to final database dump
+0000.412 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_termmeta.table.gz (22/33/fopen): adding to final database dump
+0000.413 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_terms.table.tmpr4.gz (23/33/fopen): adding to final database dump
+0000.413 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_terms.table.gz (24/33/fopen): adding to final database dump
+0000.414 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_admin_columns.table.tmpr0.gz (25/33/fopen): adding to final database dump
+0000.414 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_admin_columns.table.gz (26/33/fopen): adding to final database dump
+0000.414 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_events.table.tmpr0.gz (27/33/fopen): adding to final database dump
+0000.415 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_events.table.gz (28/33/fopen): adding to final database dump
+0000.415 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_failed_logins.table.tmpr60.gz (29/33/fopen): adding to final database dump
+0000.416 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_failed_logins.table.gz (30/33/fopen): adding to final database dump
+0000.416 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_global_meta.table.tmpr0.gz (31/33/fopen): adding to final database dump
+0000.417 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_global_meta.table.gz (32/33/fopen): adding to final database dump
+0000.417 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_login_activity.table.tmpr0.gz (33/33/fopen): adding to final database dump
+0000.418 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_login_activity.table.gz (34/33/fopen): adding to final database dump
+0000.418 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_login_lockdown.table.tmpr4.gz (35/33/fopen): adding to final database dump
+0000.419 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_login_lockdown.table.gz (36/33/fopen): adding to final database dump
+0000.419 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_permanent_block.table.tmpr0.gz (37/33/fopen): adding to final database dump
+0000.420 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_aiowps_permanent_block.table.gz (38/33/fopen): adding to final database dump
+0000.420 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_filters.table.tmpr0.gz (39/33/fopen): adding to final database dump
+0000.420 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_filters.table.gz (40/33/fopen): adding to final database dump
+0000.421 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_instances.table.tmpr3.gz (41/33/fopen): adding to final database dump
+0000.421 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_instances.table.gz (42/33/fopen): adding to final database dump
+0000.421 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_links.table.tmpr2.gz (43/33/fopen): adding to final database dump
+0000.422 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_links.table.gz (44/33/fopen): adding to final database dump
+0000.422 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_synch.table.tmpr1001.gz (45/33/fopen): adding to final database dump
+0000.423 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_blc_synch.table.gz (46/33/fopen): adding to final database dump
+0000.423 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_db7_forms.table.tmpr0.gz (47/33/fopen): adding to final database dump
+0000.424 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_db7_forms.table.gz (48/33/fopen): adding to final database dump
+0000.424 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_tm_taskmeta.table.tmpr0.gz (49/33/fopen): adding to final database dump
+0000.425 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_tm_taskmeta.table.gz (50/33/fopen): adding to final database dump
+0000.425 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_tm_tasks.table.tmpr0.gz (51/33/fopen): adding to final database dump
+0000.425 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_tm_tasks.table.gz (52/33/fopen): adding to final database dump
+0000.426 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_wpfm_backup.table.tmpr0.gz (53/33/fopen): adding to final database dump
+0000.426 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_wpfm_backup.table.gz (54/33/fopen): adding to final database dump
+0000.426 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_indexable.table.tmpr97.gz (55/33/fopen): adding to final database dump
+0000.427 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_indexable.table.gz (56/33/fopen): adding to final database dump
+0000.427 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_indexable_hierarchy.table.tmpr1001.gz (57/33/fopen): adding to final database dump
+0000.428 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_indexable_hierarchy.table.gz (58/33/fopen): adding to final database dump
+0000.428 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_migrations.table.tmpr22.gz (59/33/fopen): adding to final database dump
+0000.429 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_migrations.table.gz (60/33/fopen): adding to final database dump
+0000.429 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_primary_term.table.tmpr2.gz (61/33/fopen): adding to final database dump
+0000.429 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_primary_term.table.gz (62/33/fopen): adding to final database dump
+0000.430 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_seo_links.table.tmpr3.gz (63/33/fopen): adding to final database dump
+0000.430 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_seo_links.table.gz (64/33/fopen): adding to final database dump
+0000.431 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_seo_meta.table.tmpr36.gz (65/33/fopen): adding to final database dump
+0000.431 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db-table-nammk_yoast_seo_meta.table.gz (66/33/fopen): adding to final database dump
+0000.434 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db.gz: finished writing out complete database file (402.8 KB)
+0000.441 (0) Total database tables backed up: 33 (backup_2021-07-21-1320_Mostbet_d5a367a5974e-db.gz, size: 412610, sha1: cf027ea6611fa86cf088130c2809df56c9a2a5b1, sha256: 6b1651bde4a4b0181fd8dde0d5f5a4c6251ee2cfc45f2c4e30a04edd741defcb)
+0000.444 (0) backup_2021-07-21-1320_Mostbet_d5a367a5974e-db.gz: db: This file has not yet been successfully uploaded: will queue
+0000.445 (0) Saving backup history. Total backup size: 402.9 KB
+0000.446 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0000.447 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0000.447 (0) No remote despatch: user chose no remote backup service
+0000.448 (0) Recording as successfully uploaded: backup_2021-07-21-1320_Mostbet_d5a367a5974e-db.gz
+0000.449 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0000.450 (0) Number of backup sets in history: 2; groups (db): 1
+0000.450 (0) Examining (for databases) backup set with group_id=0, nonce=d5a367a5974e, datestamp=1626862843 (Jul 21 2021 10:20:43)
+0000.450 (0) This backup set is the backup set just made, so will not be deleted.
+0000.450 (0) Examining (for databases) backup set with group_id=0, nonce=e9b273043fa1, datestamp=1626789770 (Jul 20 2021 14:02:50)
+0000.450 (0) This backup set (1626789770) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.450 (0) Number of backup sets in history: 2; groups (files): 1
+0000.451 (0) Examining (for files) backup set with nonce=d5a367a5974e, datestamp=1626862843 (Jul 21 2021 10:20:43)
+0000.451 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0000.451 (0) Examining (for files) backup set with nonce=e9b273043fa1, datestamp=1626789770 (Jul 20 2021 14:02:50)
+0000.451 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0000.451 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0000.452 (0) Resume backup (d5a367a5974e, 0): finish run
+0000.453 (0) Decremented the semaphore (d) by 1
+0000.454 (0) Semaphore (d) unlocked
+0000.454 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0000.455 (0) The backup apparently succeeded and is now complete
+0000.456 (0) No email will/can be sent - the user has not configured an email address.
+0000.456 (0) Резервное копирование успешно завершено
