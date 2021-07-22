@@ -231,4 +231,62 @@ body.sidebar-none .entry-content {
     padding-right: 0;
 }
 
-/* box-shadow: 0 1px 10px rgb(0 0 0 / 30%); */
+.mob-hamburger {
+  border-color: #fb4c01 !important;
+}
+
+.mob-hamburger span {
+  background: #fb4c01 !important;
+}
+
+@media (max-width: 600px) {
+  .mob-hamburger {
+    right: auto;
+    left : 20px;
+  }
+
+  .site-branding {
+    display        : flex;
+    flex-direction : column;
+    flex-wrap      : wrap;
+    justify-content: flex-start;
+    align-content  : center;
+    align-items    : center;
+    padding        : 20px 40px;
+  }
+
+  .site-logotype {
+    width     : 100%;
+    text-align: center;
+    margin    : 0 0 20px;
+  }
+
+  .site-logotype img {
+    max-width : 80%;
+    max-height: 80px;
+  }
+
+  .header-buttons {
+    width          : 100%;
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+    align-content  : center;
+    align-items    : center;
+  }
+
+  .mob-search {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-buttons .header-buttons-button {
+    margin: 0 10px 20px;
+  }
+
+  .head-after-block {
+    padding: 0;
+  }
+}
